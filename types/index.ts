@@ -2,7 +2,7 @@
 
 import { Dispatch, SetStateAction } from "react";
 
-// import { Id } from "@/convex/_generated/dataModel";
+import { Id } from "@/convex/_generated/dataModel";
 
 export interface EmptyStateProps {
   title: string;
@@ -12,31 +12,31 @@ export interface EmptyStateProps {
 }
 
 export interface TopPodcastersProps {
-  // //   _id: Id<"users">;
+  _id: Id<"users">;
   _creationTime: number;
   email: string;
   imageUrl: string;
-  //   clerkId: string;
+  clerkId: string;
   name: string;
   podcast: {
     podcastTitle: string;
-    // // podcastId: Id<"podcasts">;
+    podcastId: Id<"podcasts">;
   }[];
   totalPodcasts: number;
 }
 
 export interface PodcastProps {
-  // //   _id: Id<"podcasts">;
+  _id: Id<"podcasts">;
   _creationTime: number;
-  // //   audioStorageId: Id<"_storage"> | null;
-  //   user: Id<"users">;
+  audioStorageId: Id<"_storage"> | null;
+  user: Id<"users">;
   podcastTitle: string;
   podcastDescription: string;
   audioUrl: string | null;
   imageUrl: string | null;
-  // //   imageStorageId: Id<"_storage"> | null;
+  imageStorageId: Id<"_storage"> | null;
   author: string;
-  //   authorId: string;
+  authorId: string;
   authorImageUrl: string;
   voicePrompt: string;
   imagePrompt: string | null;
@@ -54,7 +54,7 @@ export interface GeneratePodcastProps {
   voiceType: string;
   setAudio: Dispatch<SetStateAction<string>>;
   audio: string;
-  // //   setAudioStorageId: Dispatch<SetStateAction<Id<"_storage"> | null>>;
+  setAudioStorageId: Dispatch<SetStateAction<Id<"_storage"> | null>>;
   voicePrompt: string;
   setVoicePrompt: Dispatch<SetStateAction<string>>;
   setAudioDuration: Dispatch<SetStateAction<number>>;
@@ -62,7 +62,7 @@ export interface GeneratePodcastProps {
 
 export interface GenerateThumbnailProps {
   setImage: Dispatch<SetStateAction<string>>;
-  // //   setImageStorageId: Dispatch<SetStateAction<Id<"_storage"> | null>>;
+  setImageStorageId: Dispatch<SetStateAction<Id<"_storage"> | null>>;
   image: string;
   imagePrompt: string;
   setImagePrompt: Dispatch<SetStateAction<string>>;
@@ -76,7 +76,7 @@ export interface LatestPodcastCardProps {
   audioUrl: string;
   author: string;
   views: number;
-  // //   podcastId: Id<"podcasts">;
+  podcastId: Id<"podcasts">;
 }
 
 export interface PodcastDetailPlayerProps {
@@ -85,11 +85,11 @@ export interface PodcastDetailPlayerProps {
   author: string;
   isOwner: boolean;
   imageUrl: string;
-  // //   podcastId: Id<"podcasts">;
-  // //   imageStorageId: Id<"_storage">;
-  // //   audioStorageId: Id<"_storage">;
+  podcastId: Id<"podcasts">;
+  imageStorageId: Id<"_storage">;
+  audioStorageId: Id<"_storage">;
   authorImageUrl: string;
-  //   authorId: string;
+  authorId: string;
 }
 
 export interface AudioProps {
@@ -97,7 +97,7 @@ export interface AudioProps {
   audioUrl: string;
   author: string;
   imageUrl: string;
-  //   podcastId: string;
+  podcastId: string;
 }
 
 export interface AudioContextType {
@@ -109,7 +109,7 @@ export interface PodcastCardProps {
   imgUrl: string;
   title: string;
   description: string;
-  // //   podcastId: Id<"podcasts">;
+  podcastId: Id<"podcasts">;
 }
 
 export interface CarouselProps {
@@ -125,5 +125,5 @@ export interface ProfileCardProps {
 export type UseDotButtonType = {
   selectedIndex: number;
   scrollSnaps: number[];
-  //   onDotButtonClick: (index: number) => void;
+  onDotButtonClick: (index: number) => void;
 };
