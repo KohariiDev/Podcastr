@@ -1,3 +1,10 @@
+This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, JavaScript Mastery.
+
+
+
+🤖 Introduction
+A cutting-edge AI SaaS platform that enables users to create, discover, and enjoy podcasts with advanced features like text-to-audio conversion with multi-voice AI, podcast thumbnail Image generation and seamless playback.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
